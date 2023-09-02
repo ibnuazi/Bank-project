@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-color:#6dab3c;" >
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            <h2>SHOW MINI STATEMENT</h2>
+            <br>
+            <label>Enter pin:</label>
+            <input type="password" name="pin" placeholder="Enter 4 digit pin">
+            <br><br>
+            <label>Mini Statement:</label>
+            <select name="statement">
+                <option>TYPE</option>
+                <option value="deposit">DEPOSIT</option>
+                <option value="withdraw">WITHDRAW</option>
+            </select>
+            <br><br><br>
+            <input type="submit" value="Generate statement">
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="margin-top: 130px;">
+    <h1 style="text-align: center;">WELCOME TO BANK</h1>
+    <form style="text-align: center;" method="post"> {% csrf_token %}
+       <input type="text" placeholder="username" name="usname"><br><br>
+       <input type="password" placeholder="4 Digit PIN" name="psw"><br><br>
+<!--       <button type="submit">Login</button>-->
+        <input type="submit">
+    </form>
+    <br>
+   <center> <a href="http://127.0.0.1:8000/bank_app/register/" style="color: black;"><b>New user?Create a new account</b></a></center>
+</div>
+<br>
+<center> <a href="http://127.0.0.1:8000/bank_app/adminlogin/" style="color: black;"><b>Admin Login</b></a></center>
+<br>
+<center> <a href="http://127.0.0.1:8000/bank_app/forget_password/" style="color: black;"><b>Forget password?</b></a></center>
+</body>
+</html>

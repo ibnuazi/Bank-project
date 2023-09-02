@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>News</h1>
+<form method="post">{% csrf_token %}
+    <label>Topic:</label>
+    <input type="text" name="topic"><br><br>
+    <label>Content:</label>
+    <textarea placeholder="Content" name="content" rows="5" cols="25"></textarea><br><br>
+    <button style="background-color: rgb(154, 5, 5); color: white; height: 30px; width: 70px;"><b>Upload</b></button>
+</form>
+<a href="http://127.0.0.1:8000/bank_app/admin%20news%20view/"><button type="" style="background-color: rgb(154, 5, 5); color: white; height: 30px; width: 70px; margin-top:20px;"><b>Display</b></button></a>
+</body>
+</html>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <div style="text-align: center;">
+        <h1>WELCOME NEW USER</h1>
+        <center><table>
+            <form method="post" enctype="multipart/form-data">{% csrf_token %}
+                <tr>
+                    <td><input type="text" name="fname" placeholder="First Name"></td>
+                    <td><input type="text" name="lname" placeholder="Last Name"></td>
+                </tr>
+                <tr>
+                    <td><input type="text"name="uname" placeholder="username"></td>
+                    <td><input type="email" name="email" placeholder="Email"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="ph" placeholder="Phone"></td>
+                    <td><input type="file" name="file" placeholder="Image uploads"></td>
+                </tr>
+                <tr>
+                    <td><input type="password" name="pin" placeholder="4 digit pin"></td>
+                    <td><input type="password" name="repin" placeholder="Re enter 4 digit pin"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><input type="submit"></td>
+                </tr>
+            </form>
+        </table></center><br>
+    </div>
+</body>
+</html>

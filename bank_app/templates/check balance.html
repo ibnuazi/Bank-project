@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2 style="text-align: center;">Check your current balance</h2>
+<center><form method="post">{% csrf_token %}
+    <input type="password" name="pin" placeholder="Enter 4 digit pin"><br><br>
+    <button type="submit" style="height: 40px; width: 100px; background-color: rgb(117, 3, 3); color: white;">Check Balance</button>
+</form></center>
+</body>
+</html>

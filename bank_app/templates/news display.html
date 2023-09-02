@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/61b27f2c1c.js" crossorigin="anonymous"></script>
+    <style>
+     .container{
+
+             display:grid;
+             grid-template-columns:1fr 1fr 1fr 1fr;
+             grid-gap:10px;
+      }
+      .row{
+          border-top:1px solid grey;
+          grid-column:1/5;
+          margin-right:1000px;
+          padding:5px;
+      }
+
+    </style>
+
+    <script>
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('div');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("h5")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+
+    </script>
+
+
+    </style>
+    <meta charset="UTF-8">
+    <title>news</title>
+</head>
+<body>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="search by topic...">
+<h4>NEWS FEED</h4>
+<div id="myUL">
+    <!--  <div class="container">-->
+    {% for i in a %}
+    <div class="row">
+
+
+        <h5><b>{{i.topic}}</b></h5><br>
+        {{i.content}}<br>
+        {{i.date}}<br>
+        <p><i class="fa-solid fa-thumbs-up"></i> <a href="//127.0.0.1:8000/bank_app/wish/{{i.id}}"
+                                                    style="color: black;"><i class="fa-regular fa-star"></i></p></a>
+    </div>
+    {% endfor %}
+
+
+    <!-- </div>-->
+</div>
+</body>
+</html>

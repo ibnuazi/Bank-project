@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<center><div>
+  <h1>Admin Login</h1>
+  <form method="post">{% csrf_token %}
+    <table>
+      <tr>
+        <td><label>Username:</label></td>
+        <td><input type="text" placeholder=username name="username"></td>
+      </tr>
+      <tr><td><br></td></tr>
+      <tr>
+        <td><label>Password:</label></td>
+        <td><input type="password" placeholder="password" name="password"></td>
+      </tr>
+    </table>
+    <button type="submit" style="height: 30px;background-color: rgb(157, 7, 7); color: white; width: 70px; margin-top: 20px; margin-left: 70px;">Login</button>
+  </form>
+</div></center>
+</body>
+</html>

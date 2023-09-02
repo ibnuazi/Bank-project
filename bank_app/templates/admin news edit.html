@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>News</h1>
+<form method="post">{% csrf_token %}
+    <label>Topic:</label>
+    <input type="text" name="topic" value="{{a.topic}}"><br><br>
+    <label>Content:</label>
+    <textarea placeholder="Content" name="content" rows="5" cols="25" value="{{a.content}}"></textarea><br><br>
+    <button style="background-color: rgb(154, 5, 5); color: white; height: 30px; width: 70px;"><b>Upload</b></button>
+</form>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 style="text-align: center;">Withdraw Amount</h2>
+    <form method="post">{% csrf_token %}
+        <center><table><tr><td><input type="number" name="amount" placeholder="Enter Amount "></td></tr>
+            <tr><td><br></td></tr>
+            <tr><td><input type="password"name="pincode" placeholder="Enter 4 digit Pin"></td></tr>
+        </table></center>
+       <center><button type="submit" style="height: 30px;width:120px; background-color: rgb(136, 3, 3); color: white; border-radius: 5px;margin-top: 10px;" >Withdraw</button></center>
+    </form>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Change Password</h2>
+<form method="post">{% csrf_token %}
+  <input type="password" name="pin" placeholder="New Pin">
+  <input type="password" name="repin" placeholder="Re Enter">
+  <input type="submit">
+</form>
+</body>
+</html>

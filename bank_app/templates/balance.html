@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <style>
+        body{
+        background-repeat:no-repeat;
+            background-size: 100% 800px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-image: url('{% static 'money.jpg' %}')">
+<div style="margin-top:250px;">
+<h2 style="text-align: center;">Your Balance</h2>
+<p style="text-align: center;"><b>Account Number:{{ac}}</b></p>
+<p style="text-align: center;"><b>Current Balance: Rs.{{balance}}</b></p>
+    </div>
+</body>
+</html>

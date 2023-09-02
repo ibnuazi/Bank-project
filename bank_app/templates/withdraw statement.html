@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+    function myfunction(){
+
+    var body=document.getElementById('body').innerHTML;
+    var data=document.getElementById('data').innerHTML;
+    document.getElementById('body').innerHTML=data;
+       window.print()
+
+    }
+  </script>
+</head>
+<body>
+<form method="post">{% csrf_token %}
+  <h2>WITHDRAW DETAILS</h2>
+  <table border="1">
+    <tr>
+      <th>Id</th>
+      <th>Date</th>
+      <th>Deposit Amount</th>
+    </tr>
+    {% for i in x %}
+    {% if i.uid == id %}
+    <tr>
+      <td>{{i.id}}</td>
+      <td>{{i.date}}</td>
+      <td>{{i.amount}}</td>
+    </tr>
+    {% endif %}
+    {% endfor %}
+  </table>
+</form>
+<button onclick="myfunction()">Print Withdraw page</button>
+</body>
+</html>
